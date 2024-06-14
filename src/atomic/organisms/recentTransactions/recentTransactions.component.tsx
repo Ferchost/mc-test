@@ -8,7 +8,7 @@ const customData = require('../../../data/recentTransactions.json');
 const color = CommonTheme.color
 
 
-const RecentTransactionsSection = ({ limit, actualDebt, available }: any) => {
+const RecentTransactionsSection = () => {
 
   return (
     <View style={{ width: "100%", marginTop: 15, alignSelf: 'center', justifyContent: 'center', height: 266, alignItems: 'center', }}>

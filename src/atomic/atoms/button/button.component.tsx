@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity, StyleSheet, TouchableOpacityProps } from 'react-native';
 import Label from '../label/label.component';
 import { CommonTheme } from '../../theme';
 

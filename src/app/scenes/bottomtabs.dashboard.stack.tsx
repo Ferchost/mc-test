@@ -4,6 +4,7 @@ import CardsScreen from './cards.dashboard.screen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ActiveHome } from '../../atomic/atoms/icons/ActiveHome';
 import { InactiveHome } from '../../atomic/atoms/icons/InactiveHome';
+import { CommonTheme } from '../../atomic/theme';
 
 export type DashboardRoutes = {
   Onboarding: undefined;
@@ -16,27 +17,26 @@ const EmptyPage=()=>{
     <Fragment></Fragment>
   )
 }
+const color = CommonTheme.color
 
 export const BottomTabStack = ({ setActualRoute, action }: any) => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
           if (route.name === 'Cards') {
             return <ActiveHome />;
           } else {
             return <InactiveHome />;
           }
         },
-        tabBarActiveTintColor: 'tomato',
+        tabBarActiveTintColor: color.mainOranger,
         tabBarInactiveTintColor: 'gray',
         tabBarStyle: ({ height: 84 }),
       })}
     >
       <Tab.Screen
-        name="Cards"
+        name="Card"
         component={CardsScreen}        
         options={{ headerShown: false, tabBarLabel: "Home" }}
       />

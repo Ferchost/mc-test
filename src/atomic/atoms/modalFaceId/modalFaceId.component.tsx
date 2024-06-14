@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Alert, Modal, StyleSheet, Text, Pressable, View, Image } from 'react-native';
+import React from 'react';
+import {  Modal, StyleSheet, View, Image } from 'react-native';
 import Label from '../label/label.component';
 interface IModalFaceIdProps {
     FaceIdModalVisible: boolean

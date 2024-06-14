@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, TextProps, StyleSheet, TextInputProps, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, TextInputProps, View, TouchableOpacity } from 'react-native';
 import Label from '../label/label.component';
 import { BottomSheetTextInput } from "@gorhom/bottom-sheet"
 import { CommonTheme } from "../../theme/common.theme"

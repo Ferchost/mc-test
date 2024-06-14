@@ -1,11 +1,17 @@
+import { IItem } from "../../../app/scenes/onboarding.dashboard.screen";
 import ProviderCard from "../../molecules/providerCard/providerCard.component";
-import { View, FlatList } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 
+interface IProviderListProps {
+    data: IItem[],
+    setSelectedProvider: any,
+    connectedProvider: IItem
+}
 
-const ProviderList = ({ data, setSelectedProvider, connectedProvider }: any) => {
+const ProviderList = ({ data, setSelectedProvider, connectedProvider }: IProviderListProps) => {
 
     return (
-        <View style={{ width: "100%", marginTop: 35, flexDirection: 'row', alignSelf: 'center', justifyContent: 'space-between' }}>
+        <View style={styles.container}>
             <FlatList
                 data={data}
                 renderItem={(item) => <ProviderCard setSelectedProvider={setSelectedProvider} isConnected={connectedProvider?.name === item?.item?.name} item={item} />}
@@ -15,5 +21,9 @@ const ProviderList = ({ data, setSelectedProvider, connectedProvider }: any) => 
         </View>
     )
 }
+const styles = StyleSheet.create({
+    container: { width: "100%", marginTop: 35, flexDirection: 'row', alignSelf: 'center', justifyContent: 'space-between' }
+})
+
 
 export default ProviderList

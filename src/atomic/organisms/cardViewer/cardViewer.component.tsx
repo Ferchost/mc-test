@@ -1,8 +1,7 @@
 import { Animated, Image, Text, View } from "react-native";
-import CircularButtonWLabel from "../../atoms/button/circularButtonWithLabel.component";
 import Label from "../../atoms/label/label.component";
 import Carousel from "react-native-reanimated-carousel";
-import CreditCard from "../../molecules/creditCard/creditCard.component";
+import CreditCard, { ICreditCard } from "../../molecules/creditCard/creditCard.component";
 import Button from "../../atoms/button/button.component";
 import { CommonTheme } from "../../theme";
 
@@ -20,7 +19,7 @@ const CardViewer = ({ heightAnim, customData, carouselIndex, blockedCards, handl
         data={customData}
         width={290}
         height={180}
-        renderItem={({ item }) => <CreditCard isLocked={blockedCards} item={item} />}
+        renderItem={({ item }) => <CreditCard isLocked={blockedCards} item={item as ICreditCard} />}
         onSnapToItem={handleSnapToItem}
         pagingEnabled={true}
         autoPlay={false}

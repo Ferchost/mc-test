@@ -1,7 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { FC, Fragment, useRef, useState } from 'react';
-import { CustomHeader, DashboardRoutes } from './dashboard.stack';
-import { Animated, Dimensions, ScrollView, View } from 'react-native';
+import { DashboardRoutes } from './dashboard.stack';
+import { Animated, ScrollView, View } from 'react-native';
 import MainActionsButtons from '../../atomic/organisms/mainActionsButtons/mainActionButtons.component';
 import BalanceSection from '../../atomic/organisms/balanceSection/balanceSection.component';
 import PaymenteSection from '../../atomic/organisms/paymentSection/paymentSection.component';
@@ -9,12 +9,11 @@ import RecentTransactionsSection from '../../atomic/organisms/recentTransactions
 import { CommonTheme } from "../../atomic/theme/common.theme"
 import ModalFaceId from '../../atomic/atoms/modalFaceId/modalFaceId.component';
 import CardViewer from '../../atomic/organisms/cardViewer/cardViewer.component';
+import CustomHeader from '../../atomic/molecules/header/header.component';
 const customData = require('../../data/userCards.json');
 
 const color = CommonTheme.color
 type ScreenProps = StackScreenProps<DashboardRoutes, 'Cards'>;
-const { width, height } = Dimensions.get('window');
-
 
 const CardsScreen: FC<ScreenProps | any> = ({ navigation }) => {
     const [carouselIndex, setCarouselIndex] = useState(0)
@@ -52,7 +51,7 @@ const CardsScreen: FC<ScreenProps | any> = ({ navigation }) => {
 
     return (
         <Fragment>
-            <CustomHeader title={'Cards'} route={''} closeButton={expanded} cornerAction={toggleHeight} />
+            <CustomHeader title={'Cards'} closeButton={expanded} cornerAction={toggleHeight} />
             <ScrollView>
                 <CardViewer
                     heightAnim={heightAnim}

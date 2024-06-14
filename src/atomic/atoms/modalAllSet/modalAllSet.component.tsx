@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Alert, Modal, StyleSheet, Text, Pressable, View, Image, Touchable, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Modal, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import Label from '../label/label.component';
 import { CommonTheme } from "../../theme/common.theme"
 import GradientButton from '../button/gradientbutton.component';

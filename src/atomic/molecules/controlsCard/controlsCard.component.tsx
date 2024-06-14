@@ -1,7 +1,5 @@
-import { View, Text, StyleSheet, Alert, Image } from "react-native"
-import Button from "../../atoms/button/button.component"
+import { View, StyleSheet, Image } from "react-native"
 import Label from "../../atoms/label/label.component"
-import TextInput from "../../atoms/textInput/textInput.component"
 import { CommonTheme } from "../../theme/common.theme"
 import { ChevronRight } from "../../atoms/icons/chevronRight"
 import { TouchableOpacity } from "react-native-gesture-handler"

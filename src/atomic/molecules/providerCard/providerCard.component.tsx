@@ -1,7 +1,5 @@
-import { View, Text, StyleSheet, Alert, Image } from "react-native"
+import { View, StyleSheet, Image } from "react-native"
 import Button from "../../atoms/button/button.component"
-import Label from "../../atoms/label/label.component"
-import TextInput from "../../atoms/textInput/textInput.component"
 import { CommonTheme } from "../../theme/common.theme"
 import GradientButton from "../../atoms/button/gradientbutton.component"
 

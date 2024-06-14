@@ -104,14 +104,14 @@ const OnboardingDashboardScreen: FC<ScreenProps> = ({ navigation }) => {
         barStyle="light-content"
         backgroundColor="transparent"
       />
-      <View style={{ paddingHorizontal: 25, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff", width: "100%", height: "100%", }} >
+      <View style={styles.container} >
         <Label style={{ marginTop: 0 }} variant={'h5'}>
           Connect service providers
         </Label>
         <Label style={{ marginTop: 25, textAlign: 'center', width: '90%' }} variant={'p1'}>
           Select accounts you have that you would like to update with your new credit card
         </Label>
-        <ProviderList data={customData} setSelectedProvider={setSelectedProvider} selectedProvider={selectedProvider} connectedProvider={connectedProvider} setConnectedProvider={setConnectedProvider} />
+        <ProviderList data={customData} setSelectedProvider={setSelectedProvider}  connectedProvider={connectedProvider} />
         <GradientButton style={{ width: "100%", marginTop: 45 }} title={'Continue'} disabled={connectedProvider.name == ""} onPress={() => handleContinue()} />
         <Button style={{ width: "100%", marginTop: 15 }} title={'Skip for now'} variant={'activeWithBorder'} onPress={() => Alert.alert("action no ready")} />
       </View>
@@ -132,25 +132,7 @@ const OnboardingDashboardScreen: FC<ScreenProps> = ({ navigation }) => {
   );
 };
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-    backgroundColor: 'grey',
-  },
-  contentContainer: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  input: {
-    marginTop: 8,
-    height: 44,
-    marginBottom: 10,
-    borderRadius: 7,
-    fontSize: 16,
-    lineHeight: 20,
-    padding: 8,
-    backgroundColor: 'rgba(151, 151, 151, 0.25)',
-  },
+  container: { paddingHorizontal: 25, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff", width: "100%", height: "100%", },
 });
 
 export default OnboardingDashboardScreen;

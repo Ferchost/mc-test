@@ -1,5 +1,4 @@
 import { View } from "react-native";
-import CircularButtonWLabel from "../../atoms/button/circularButtonWithLabel.component";
 import Label from "../../atoms/label/label.component";
 import ProgressBar from "../../atoms/progressBar/progressBar.component";
 

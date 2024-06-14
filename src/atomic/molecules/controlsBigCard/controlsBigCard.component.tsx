@@ -1,9 +1,6 @@
-import { View, Text, StyleSheet, Alert, Image, TouchableOpacity } from "react-native"
-import Button from "../../atoms/button/button.component"
+import { StyleSheet, Image, TouchableOpacity } from "react-native"
 import Label from "../../atoms/label/label.component"
-import TextInput from "../../atoms/textInput/textInput.component"
 import { CommonTheme } from "../../theme/common.theme"
-import { ChevronRight } from "../../atoms/icons/chevronRight"
 
 const color = CommonTheme.color
 interface IControlsCardProp {

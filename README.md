@@ -1,3 +1,8 @@
+# Results
+
+![alt text](https://github.com/Ferchost/mc-test/blob/main/screenshots/2.png?raw=true) 
+
+
 # Requirements
 
 * Implement the following screens: [Figma](https://www.figma.com/file/GQccaSiW6oFKzdCh6mmdGx/Sample-screens-for-dev-interview?type=design&node-id=1%3A4&mode=dev)

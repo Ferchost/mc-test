@@ -1,6 +1,7 @@
 # Results
 
 ![alt text](https://github.com/Ferchost/mc-test/blob/main/screenshots/2.png?raw=true) 
+<img src="https://github.com/Ferchost/mc-test/blob/main/screenshots/2.png" width="48">
 
 
 # Requirements

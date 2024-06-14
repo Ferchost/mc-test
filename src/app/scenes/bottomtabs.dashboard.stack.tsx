@@ -24,13 +24,13 @@ export const BottomTabStack = ({ setActualRoute, action }: any) => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === 'Cards') {
+          if (route.name === 'Card') {
             return <ActiveHome />;
           } else {
             return <InactiveHome />;
           }
         },
-        tabBarActiveTintColor: color.mainOranger,
+        tabBarActiveTintColor: color.mainOrange,
         tabBarInactiveTintColor: 'gray',
         tabBarStyle: ({ height: 84 }),
       })}

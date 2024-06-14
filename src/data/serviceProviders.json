@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Netflix",
+        "logo": "Brand1",
+        "barColor": "#e50813"
+    },
+    {
+        "id": 2,
+        "name": "Spotify",
+        "logo": "Brand6",
+        "barColor": "#1ED760"
+    },
+    {
+        "id": 3,
+        "name": "Uber Eats",
+        "logo": "Brand2",
+        "barColor": "#0bc16a"
+    },
+    {
+        "id": 4,
+        "name": "Starbucks",
+        "logo": "Brand3",
+        "barColor": "#01643c"
+    }
+]

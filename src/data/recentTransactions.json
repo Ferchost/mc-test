@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Starbucks",
+        "logo": "Brand3",
+        "date": "2021-10-12",
+        "time": "08:23AM",
+        "amount": 5.43,
+        "pointsearned": "+5pts"
+    },
+    {
+        "id": 2,
+        "name": "Amazon",
+        "logo": "Brand4",
+        "date": "2021-10-12",
+        "time": "08:23AM",
+        "amount": 125.30,
+        "pointsearned": "+125pts"
+    },
+    {
+        "id": 3,
+        "name": "Dunkin Donuts",
+        "logo": "Brand5",
+        "date": "2021-10-12",
+        "time": "08:23AM",
+        "amount": 10.84,
+        "pointsearned": "+10pts"
+    }
+]

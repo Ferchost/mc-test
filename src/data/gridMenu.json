@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Reset PIN",
+        "icon": "cardPin"
+    },
+    {
+        "title": "Notifications",
+        "icon": "bell"
+    },
+    {
+        "title": "Request New Card",
+        "icon": "card"
+    },
+    {
+        "title": "Adjust Credit Limit",
+        "icon": "arrows"
+    }
+]

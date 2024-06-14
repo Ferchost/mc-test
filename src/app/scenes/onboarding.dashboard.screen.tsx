@@ -104,7 +104,7 @@ const OnboardingDashboardScreen: FC<ScreenProps> = ({ navigation }) => {
         barStyle="light-content"
         backgroundColor="transparent"
       />
-      <View style={{ paddingHorizontal: 25, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff", width: "100%", height: "100%" }} >
+      <View style={{ paddingHorizontal: 25, justifyContent: 'center', alignItems: 'center', backgroundColor: "#fff", width: "100%", height: "100%", }} >
         <Label style={{ marginTop: 0 }} variant={'h5'}>
           Connect service providers
         </Label>

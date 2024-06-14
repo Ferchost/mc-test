@@ -39,7 +39,8 @@ const ProviderCard = ({ item, setSelectedProvider, isConnected }: IProviderCardP
 }
 const styles = StyleSheet.create({
     container: {
-        margin: 8,
+        flex:1,
+        margin:10,
         paddingHorizontal: 25,
         justifyContent: "space-around",
         alignItems: 'center',
@@ -59,7 +60,8 @@ const styles = StyleSheet.create({
 
     },
     containerSelected: {
-        margin: 8,
+        flex:1,
+        margin:10,
         paddingHorizontal: 25,
         justifyContent: "space-around",
         alignItems: 'center',

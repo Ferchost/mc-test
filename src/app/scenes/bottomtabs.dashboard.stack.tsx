@@ -1,15 +1,9 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import OnboardingDashboardScreen from './onboarding.dashboard.screen';
-import LinearGradient from 'react-native-linear-gradient';
-import { Alert, Button, StyleSheet, Text, View } from 'react-native';
-import { RouteProp } from '@react-navigation/native';
+import React, { Fragment } from 'react';
+import { StyleSheet } from 'react-native';
 import CardsScreen from './cards.dashboard.screen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ActiveHome } from '../../atomic/atoms/icons/ActiveHome';
 import { InactiveHome } from '../../atomic/atoms/icons/InactiveHome';
-
-
 
 export type DashboardRoutes = {
   Onboarding: undefined;
@@ -17,7 +11,11 @@ export type DashboardRoutes = {
 };
 
 const Tab = createBottomTabNavigator();
-
+const EmptyPage=()=>{
+  return(
+    <Fragment></Fragment>
+  )
+}
 
 export const BottomTabStack = ({ setActualRoute, action }: any) => {
   return (
@@ -31,8 +29,6 @@ export const BottomTabStack = ({ setActualRoute, action }: any) => {
           } else {
             return <InactiveHome />;
           }
-
-          // Puedes devolver cualquier componente aquí
         },
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
@@ -46,17 +42,17 @@ export const BottomTabStack = ({ setActualRoute, action }: any) => {
       />
       <Tab.Screen
         name="Rewards"
-        component={CardsScreen}
+        component={EmptyPage}
         options={{ headerShown: false, tabBarLabel: "Rewards" }}
       />
       <Tab.Screen
         name="PFM"
-        component={CardsScreen}
+        component={EmptyPage}
         options={{ headerShown: false, tabBarLabel: "PFM" }}
       />
       <Tab.Screen
         name="More"
-        component={CardsScreen}
+        component={EmptyPage}
         options={{ headerShown: false, tabBarLabel: "More" }}
       />
     </Tab.Navigator>

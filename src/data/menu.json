@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Face ID",
+        "status": "Enabled",
+        "icon": "faceId"
+    },
+    {
+        "title": "Apple Wallet",
+        "status": "Open",
+        "icon": "wallet"
+    },
+    {
+        "title": "Auto Pay",
+        "status": "Enabled",
+        "icon": "recurring"
+    },
+    {
+        "title": "Online Statements",
+        "status": "Enrolled",
+        "icon": "leaves"
+    },
+    {
+        "title": "Manage Subscriptions",
+        "status": 3,
+        "icon": "link"
+    },
+    {
+        "title": "Authorized Users",
+        "status": 1,
+        "icon": "addUser"
+    },
+    {
+        "title": "Spend Limit Settings",
+        "status": "",
+        "icon": "warning"
+    },
+    {
+        "title": "Overseas Spend Settings",
+        "status": "",
+        "icon": "globe"
+    },
+    {
+        "title": "Tap & Pay",
+        "status": "",
+        "icon": "contactless"
+    },
+    {
+        "title": "FICO Score",
+        "status": "",
+        "icon": "score"
+    }
+]

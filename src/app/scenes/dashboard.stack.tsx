@@ -8,21 +8,26 @@ import CardsScreen from './cards.dashboard.screen';
 import { BottomTabStack } from './bottomtabs.dashboard.stack';
 import Label from '../../atomic/atoms/label/label.component';
 import { Close } from '../../atomic/atoms/icons/close';
+import { ChevronLeft } from '../../atomic/atoms/icons/chevronLeft';
+import ControlsScreen from './controls.dashboard.screen';
 
 export type DashboardRoutes = {
   Onboarding: undefined;
   Cards: undefined;
+  Controls:undefined
 };
 interface IHeader {
   title: string
   route: string
   cornerAction?: () => any,
-  closeButton?: boolean
+  closeButton?: boolean,
+  backButton?: boolean
+
 }
 
 const Stack = createStackNavigator<DashboardRoutes>();
 
-export const CustomHeader = ({ title, route, cornerAction, closeButton }: IHeader) => {
+export const CustomHeader = ({ title, route, cornerAction, closeButton, backButton }: IHeader) => {
   return (
     <LinearGradient
       colors={['#e35306', '#f88c1f']}
@@ -32,13 +37,16 @@ export const CustomHeader = ({ title, route, cornerAction, closeButton }: IHeade
     >
       <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'space-between', height: 35, paddingHorizontal: 20, alignItems: 'center' }}>
 
-        <TouchableOpacity onPress={cornerAction} style={{ height: 35, width: '10%',  alignItems: 'center', justifyContent: 'center' }}>
+        <TouchableOpacity onPress={cornerAction} style={{ height: 35, width: '5%', alignItems: 'center', justifyContent: 'center' }}>
           {
-            closeButton ? <Close color='#fff' /> : <></>
+            closeButton && <Close color='#fff' />
+          }
+          {
+            backButton && <ChevronLeft />
           }
         </TouchableOpacity>
         <Label style={styles.headerTitle} variant={'h6'}>{title}</Label>
-        <View style={{ height: 50, width: '10%' }} />
+        <View style={{ height: 50, width: '5%' }} />
       </View>
     </LinearGradient>
   );
@@ -60,7 +68,7 @@ export const DashboardStack = () => {
         },
         headerTitleStyle: {
           color: 'white',
-          width: '80%'
+          width: '90%'
         },
       })}>
       <Stack.Screen
@@ -71,6 +79,11 @@ export const DashboardStack = () => {
         name="Cards"
         options={{ headerShown: false }}
         component={BottomTabStack}
+      />
+      <Stack.Screen
+        name="Controls"
+        options={{ headerShown: false }}
+        component={ControlsScreen}
       />
     </Stack.Navigator>
   );
